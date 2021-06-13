@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>reverb - settings/trigger</title>
+        <script type="application/javascript">
+                // function formsubmit() {
+                //     post = document.getElementById('postBox').value
+                //     xhttp.open("POST", "<<IP GOES HERE>>:5000/settings/trigger", true);
+                //     xhttp.setRequestHeader("Content-type", "application/json");
+                //     xhttp.send(post);
+                //     console.log(`setting trigger word to ${post}`);
+                // }
+        </script>
+        <style>
+                        body {
+                          font-family: "Lato", sans-serif;
+                        }
+                        
+                        .sidenav {
+                          width: 130px;
+                          position: fixed;
+                          z-index: 1;
+                          top: 20px;
+                          left: 10px;
+                          background: #eee;
+                          overflow-x: hidden;
+                          padding: 8px 0;
+                        }
+                        
+                        .sidenav a {
+                          padding: 6px 8px 6px 16px;
+                          text-decoration: none;
+                          font-size: 25px;
+                          color: #2196F3;
+                          display: block;
+                        }
+                        
+                        .sidenav a:hover {
+                          color: #064579;
+                        }
+                        
+                        .main {
+                          margin-left: 140px; /* Same width as the sidebar + left position in px */
+                          font-size: 28px; /* Increased text to enable scrolling */
+                          padding: 0px 10px;
+                        }
+                        
+                        @media screen and (max-height: 450px) {
+                          .sidenav {padding-top: 15px;}
+                          .sidenav a {font-size: 18px;}
+                        }
+        </style>
+</head>
+<body>
+
+<div class="main">
+        <p>New Trigger Word:</p>
+
+        <form method="POST" action="/settings/trigger">
+                <input name="content" type="text" maxlength="512" id="postBox" value="<<OLD TRIGGER GOES HERE>>"/>
+                <input type="submit" value="Post">
+        </form>
+</div>
+
+<div class="sidenav">
+        <a href="http://<<IP GOES HERE>>:5000/settings/trigger">Wake Word</a>
+        <a href="http://<<IP GOES HERE>>:5000/settings/music">Music</a>
+        <a href=""></a>
+        <a href=""></a>
+    </div>
+
+</body>
